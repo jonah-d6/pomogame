@@ -1,6 +1,9 @@
 import pickle
 
 # datalog = [totalXP, list of logs]
+# TODO: make a way to list past sessions
+
+# save new data, create new log if empty
 def save(dateTime, timeSpentMinutes, xpGained):
     dataLog = [0, []]
     sessionData = {
@@ -21,6 +24,7 @@ def save(dateTime, timeSpentMinutes, xpGained):
             dataLog[1].append(sessionData)
             pickle.dump(dataLog, f)
 
+# get old data, create new log if empty
 def read():
     dataLog = [5, []]
     try:
