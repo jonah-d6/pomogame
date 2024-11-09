@@ -22,7 +22,7 @@ def save(dateTime, timeSpentMinutes, xpGained):
             pickle.dump(dataLog, f)
 
 def read():
-    dataLog = [0, []]
+    dataLog = [5, []]
     try:
         with open('log.pkl', 'rb') as f:
             dataLog = pickle.load(f)

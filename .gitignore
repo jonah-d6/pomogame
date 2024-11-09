@@ -1,3 +1,4 @@
 *.swp
 *.idea/
 *.pkl
+*__pycache__
