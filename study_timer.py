@@ -6,9 +6,8 @@ from tkinter.ttk import Progressbar
 import math
 
 # Constants
-STUDY_TIME = 0.5 * 60  # 30 seconds
-BREAK_TIME = 0.1 * 60 # 6 seconds
-
+STUDY_TIME = 3 * 60  # 3 minutes
+BREAK_TIME = 1 * 60 # 1 minute
 class StudyTimer:
     def __init__(self, root, startXP):
         self.root = root
