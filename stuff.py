@@ -1,10 +1,7 @@
 import math
-from log import read
 
-experienceLog = read()
-currentExperience = experienceLog[0]
-currentLevel = int(math.log(currentExperience))
+def leftoverExperience(currentExperience, currentLevel): return currentExperience - math.e ** currentLevel
 
-def leftoverExperience(): return currentExperience - math.e ** currentLevel
+def experienceLeft(currentExperience, currentLevel): return math.e ** (currentLevel + 1) - currentExperience
 
-def experienceLeft(): return math.e ** (currentLevel + 1) - currentExperience
+def levelFromXP(currentExperience): return math.floor(math.log(currentExperience))

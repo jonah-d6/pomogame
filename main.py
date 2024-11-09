@@ -1,26 +1,31 @@
+import datetime
 import tkinter as tk
 from tkinter.ttk import *
-from bar import updateBar
-from study_timer import StudyTimer, level
+from study_timer import StudyTimer
 from log import save, read
 import stuff
 
+def leave():
+    raise SystemExit
 
 def main():
+    start = datetime.datetime.now()
+
     root = tk.Tk()
 
-    Button(root, text = 'Stop Studying', command = stopStudy)
-
-    label = tk.Label(root, text="Your current level is " +
-            str(study_timer.level()) + "!")
+    Button(root, text='Save And Exit', command=leave).pack()
 
     xp, pastLog = read()
 
-    updateBar(root, stuff.leftoverExperience(), stuff.experienceLeft())
+    print(xp)
 
-    app = StudyTimer(root)
+    app = StudyTimer(root, xp)
 
-    root.mainloop()
+    try:
+        root.mainloop()
+    except SystemExit:
+        timeSpent = datetime.datetime.now() - start
+        save(start, timeSpent.total_seconds() / 60, app.xp - xp)
 
 if __name__ == '__main__':
     main()
