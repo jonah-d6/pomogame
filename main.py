@@ -1,5 +1,6 @@
 import tkinter as tk
 from bar import updateBar
+from study_timer import Study_Timer
 
 
 def main():
