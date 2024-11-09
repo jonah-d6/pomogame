@@ -1,12 +1,16 @@
 import tkinter as tk
 from bar import updateBar
 from study_timer import StudyTimer
+from log import save, read
+import stuff
 
 
 def main():
     root = tk.Tk()
 
-    updateBar(root, 150, 200)
+    xp, pastLog = read()
+
+    updateBar(root, stuff.leftoverExperience(), stuff.experienceLeft())
 
     app = StudyTimer(root)
 
