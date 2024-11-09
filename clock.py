@@ -5,9 +5,10 @@ root = Tk()
 
 C = Canvas(root, bg="white", height=600, width=600)
 
-for i in range(360):
+i = 0 #counter for degrees
+def anotherArc(i):
     arc = C.create_arc(180, 150, 80, 210, start = i, extent = (i+1),
         fill = "green")
-    time.sleep(1)
+    root.after(100, anotherArc(i+1))
 C.pack()
 mainloop()
