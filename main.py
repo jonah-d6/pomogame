@@ -1,4 +1,6 @@
 import tkinter as tk
+from bar import updateBar
+from
 
 def main():
     root = tk.Tk()
