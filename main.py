@@ -1,12 +1,14 @@
 import tkinter as tk
 from bar import updateBar
-from
+
 
 def main():
     root = tk.Tk()
 
     label = tk.Label(root, text='We cookin now')
     label.pack()
+
+    updateBar(root, 150, 200)
 
     root.mainloop()
 

@@ -2,8 +2,8 @@ from tkinter import *
 from tkinter.ttk import *
 import time
 
-def updateBar(leftover_exp, exp_to_go):
-    progress = Progressbar(root, orient = HORIZONTAL, length = 100,
+def updateBar(space, leftover_exp, exp_to_go):
+    progress = Progressbar(space, orient = HORIZONTAL, length = 100,
             mode = 'determinate')
     progress.pack()
 
