@@ -12,7 +12,7 @@ class StudyTimer:
         
         # Timer settings
         self.time_left = STUDY_TIME
-        self.studyMode = "STUDY"
+        self.studyMode = True
         self.color = "black"
         
         # Set up UI elements
