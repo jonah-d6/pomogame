@@ -1,17 +1,11 @@
-import tkinter as tk
-import time
+import math
+from log import read
 
-root = tk.Tk()
-canvas = tk.Canvas(root, width=200, height=200)
-canvas.pack()
+experienceLog = read()
+currentExperience = experienceLog[0]
+currentLevel = int(math.log(currentExperience))
+leftoverExperince = currentExperience - math.e ** currentLevel
 
-def createArc(i):
-    canvas.create_arc(10, 10, 190, 190, start=0, extent=i*5, fill='blue')
+experienceLeft = math.e ** (currentLevel + 1) - currentExperience
 
-
-for i in range(360):
-    createArc(i)
-    canvas.update()
-    time.sleep(1)
-    
-root.mainloop()
+print(currentExperience,currentLevel,leftoverExperince, experienceLeft)
