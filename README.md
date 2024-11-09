@@ -12,4 +12,7 @@
 # "Experience" bar / levels that the user earns by studying.
 
 # The functionality of the study timer itself. (Alternating timer.)
-# 
+
+# A save file that logs your gained experience and past study sessions.
+
+# Productivity Tracker?
