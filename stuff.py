@@ -1,6 +1,8 @@
 import math
+import time
+from log import read
 
-currentExperience = 1097
+currentExperience = read()
 currentLevel = int(math.log(currentExperience))
 
 leftoverExperince = currentExperience - math.e ** currentLevel
