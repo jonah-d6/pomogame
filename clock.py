@@ -1,16 +1,25 @@
 from tkinter import *
+import time
 
 root = Tk()
 
 C = Canvas(root, bg="white", height=600, width=600)
+C.pack()
 
-def anotherArc(i):
-    arc = C.create_arc(180, 150, 80, 210, start = i, extent = (i+1),
-        fill = "green")
-    root.update()
+def createArc(n, c):
+    C.create_arc(10, 10, 190, 190, start=0, extent =i+1, fill = c)
 
-for i in range(100):
-    root.after(1000, anotherArc(i))
+for i in range(360):
+    createArc(i, "blue")
+    C.update()
+    time.sleep(0.1)
+    C.delete('all')
+
+for i in range(360):
+    createArc(i, "purple")
+    C.update()
+    time.sleep(0.01)
+    C.delete('all')
 
 
 C.pack()
