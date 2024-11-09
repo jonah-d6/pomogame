@@ -1,5 +1,7 @@
 import math
 
+# helper methods
+
 def leftoverExperience(currentExperience, currentLevel): return currentExperience - math.e ** currentLevel
 
 def experienceLeft(currentExperience, currentLevel): return math.e ** (currentLevel + 1) - currentExperience

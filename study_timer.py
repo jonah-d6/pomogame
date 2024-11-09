@@ -71,9 +71,3 @@ class StudyTimer:
             self.studyMode = not self.studyMode
             self.time_left = STUDY_TIME if self.studyMode else BREAK_TIME
             self.update_timer()
-
-## Run the timer app
-#if __name__ == "__main__":
-#    root = tk.Tk()
-#    app = StudyTimer(root)
-#    root.mainloop()
