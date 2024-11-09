@@ -1,8 +1,10 @@
 import math
 
-currentExperience = 600
+currentExperience = 1097
 currentLevel = int(math.log(currentExperience))
+
 leftoverExperince = currentExperience - math.e ** currentLevel
 
-print(currentExperience,currentLevel,leftoverExperince)
+experienceLeft = math.e ** (currentLevel + 1) - currentExperience
 
+print(currentExperience,currentLevel,leftoverExperince, experienceLeft)
